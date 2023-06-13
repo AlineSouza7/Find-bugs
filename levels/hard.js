@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let character = Array.from(document.querySelectorAll(".clickable"));
   
-    character.sort(() => Math.random() - 0.5);
+   
 
     if(localStorage.getItem("enemyQty") == null || 
     localStorage.getItem("enemyQty") == undefined){
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 enemy.forEach((enemyElement) => {
     enemyElement.addEventListener('click', () => {
-        let addValue = (parseInt(localStorage.getItem("enemyQty")));
+        let addValue = (parseInt(localStorage.getItem("enemyQty")) + 1);
         localStorage.setItem("enemyQty", addValue);
         if(parseInt(localStorage.getItem("enemyQty")) == 10){
             let points = 300;
