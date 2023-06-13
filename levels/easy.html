@@ -7,19 +7,22 @@
 	<meta name="viewport" content="width=device-width, user-scalable=YES, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
-	<script type='text/javascript'src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+	<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
+	<script type='text/javascript'
+		src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
 	<link rel="stylesheet" href="./levels.css">
 	<title>You're dead - Game</title>
 </head>
+
 <body>
 	<!-- timer -->
-	<p id="timer">60</p> <p id="seg">seg.</p>
+	<p id="timer">60</p>
+	<p id="seg">seg.</p>
 	<!-- qty enemies -->
 	<p id="qtyEnemies">0/7 inimigos</p>
 	<!-- hearts -->
 	<img src="/img/icons/heart.png" class="heart" id="heart2">
-	
+
 	<a-scene class="scene" embedded vr-mode-ui="enabled: false" arjs=" sourceType: webcam; debugUIEnabled: false;">
 		<a-assets>
 			<!-- enemies -->
@@ -72,11 +75,12 @@
 		<a-image click-listener src="#friend13img" class="clickable friend" id="friend13" scale="6 6 6 "></a-image>
 
 		<a-entity id="rig">
-            <a-entity cursor raycaster="far: 200; objects: .clickable" id="camera" camera look-controls>
+			<a-entity cursor raycaster="far: 200; objects: .clickable" id="camera" camera look-controls>
 				<a-cursor id="cursor" color="purple" raycaster fuse="true" fuse-timeout="2000"></a-cursor>
 			</a-entity>
 		</a-entity>
 	</a-scene>
-
+	<script src="easy.js"></script>
 </body>
+
 </html>
