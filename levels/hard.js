@@ -3,6 +3,8 @@ const enemy = document.querySelectorAll(".enemy");
 let timer = parseInt(document.getElementById("timer").innerHTML);
 let aux = timer;
 
+document.addEventListener("cursor", function() {}) //aqui
+
 document.addEventListener("DOMContentLoaded", function() {
 
     localStorage.setItem("level", "hard");
@@ -16,10 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }, 1000)
 
-    
     let character = Array.from(document.querySelectorAll(".clickable"));
   
-    // character.sort(() => Math.random() - 0.5);
+    character.sort(() => Math.random() - 0.5);
 
     if(localStorage.getItem("enemyQty") == null || 
     localStorage.getItem("enemyQty") == undefined){
