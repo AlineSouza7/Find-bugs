@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let character = Array.from(document.querySelectorAll(".clickable"));
   
-   
+    character.sort(() => Math.random() - 0.5);
 
     if(localStorage.getItem("enemyQty") == null || 
     localStorage.getItem("enemyQty") == undefined){
