@@ -3,7 +3,7 @@ const enemy = document.querySelectorAll(".enemy");
 let timer = parseInt(document.getElementById("timer").innerHTML);
 let aux = timer;
 
-document.addEventListener("cursor", function() { }) //aqui
+document.addEventListener("cursor", function() { }) // aqui
 
 document.addEventListener("DOMContentLoaded", function() {
 
